@@ -10,7 +10,7 @@ inDevelop="Not Implemented."
 #Usage display. TODO:
 usage=" Usage: "+sys.argv[0]+" COMMAND"
 #Commands will need to be expanded with the switch in parseCommand()
-commands=["START","STOP","RESTART","CREATE","DELETE","EDIT","EXPORT","IMPORT","BACKUP","INSTALL"]
+commands=["START","STOP","RESTART","Status","CREATE","DELETE","EDIT","LIST","EXPORT","IMPORT","BACKUP","INSTALL"]
 #Options will need to be expanded with the switch in parseOptions()
 options=["--help", "-h","--version", "-v"]
 
@@ -24,12 +24,16 @@ def parseCommand(command, args):
         print("Stop Service.",inDevelop, args)
     elif command == "RESTART":
         print("Restart Service.",inDevelop)
+    elif command == "STATUS":
+        print("Service status.",inDevelop)
     elif command == "CREATE":
         print("Create Service.",inDevelop)
     elif command == "DELETE":
         print("Delete Service.",inDevelop)
     elif command == "EDIT":
         print("Edit Service.",inDevelop)
+    elif command == "LIST":
+        print("List Services.",inDevelop)
     elif command == "EXPORT":
         print("Export Service.",inDevelop)
     elif command == "IMPORT":

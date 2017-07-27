@@ -319,3 +319,288 @@
 2017-07-26T20:32:21.700554904 0.112218s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2017-07-26T20:32:21.700554905 0.112221s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
 2017-07-26T20:32:22.053564100 0.465498s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T08:35:32.315413700 0.012335s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T08:35:32.329561400 0.025866s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T08:35:32.329561401 0.025900s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T08:35:32.455433300 0.151800s info: Automatically using cache size of 2474 MB
+2017-07-27T08:35:32.457103700 0.153683s notice: Listening for intracluster connections on port 29015
+2017-07-27T08:35:32.457878600 0.155012s notice: Listening for client driver connections on port 28015
+2017-07-27T08:35:32.458890000 0.155196s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T08:35:32.458890001 0.155199s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T08:35:32.458890002 0.155201s notice: Listening on driver address: 127.0.0.1
+2017-07-27T08:35:32.458890003 0.155202s notice: Listening on http address: 127.0.0.1
+2017-07-27T08:35:32.458890004 0.155203s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T08:35:32.458890005 0.155205s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T08:35:32.842583500 0.539339s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:26:05.763542200 0.013464s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:26:05.764541600 0.013634s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:26:05.764541601 0.013662s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:26:05.863545200 0.112824s info: Automatically using cache size of 2140 MB
+2017-07-27T11:26:05.865545400 0.114913s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:26:05.866544000 0.116495s notice: Listening for client driver connections on port 28015
+2017-07-27T11:26:05.867542500 0.116720s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:26:05.867542501 0.116733s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:26:05.867542502 0.116734s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:26:05.867542503 0.116735s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:26:05.867542504 0.116736s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:26:05.867542505 0.116738s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:26:06.153540500 0.403419s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:26:27.723850300 0.012746s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:26:27.723850301 0.012852s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:26:27.723850302 0.012878s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:26:27.807833500 0.096849s info: Automatically using cache size of 2144 MB
+2017-07-27T11:26:27.809833200 0.098527s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:26:27.810832600 0.099845s notice: Listening for client driver connections on port 28015
+2017-07-27T11:26:27.810832601 0.100045s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:26:27.810832602 0.100049s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:26:27.810832603 0.100050s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:26:27.810832604 0.100052s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:26:27.810832605 0.100053s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:26:27.810832606 0.100055s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:26:28.046838700 0.335413s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:27:56.864953900 0.011975s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:27:56.864953901 0.012069s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:27:56.864953902 0.012087s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:27:56.952952800 0.100245s info: Automatically using cache size of 2147 MB
+2017-07-27T11:27:56.954952900 0.102070s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:27:56.956953500 0.103528s notice: Listening for client driver connections on port 28015
+2017-07-27T11:27:56.956953501 0.103727s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:27:56.956953502 0.103731s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:27:56.956953503 0.103733s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:27:56.956953504 0.103734s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:27:56.956953505 0.103735s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:27:56.956953506 0.103737s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:27:57.184975700 0.331539s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:28:22.750056100 0.019557s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:28:22.750056101 0.019686s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:28:22.750056102 0.019713s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:28:22.832053200 0.102135s info: Automatically using cache size of 2134 MB
+2017-07-27T11:28:22.834055500 0.104247s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:28:22.836055600 0.105974s notice: Listening for client driver connections on port 28015
+2017-07-27T11:28:22.836055601 0.106279s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:28:22.836055602 0.106284s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:28:22.836055603 0.106286s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:28:22.836055604 0.106288s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:28:22.836055605 0.106290s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:28:22.836055606 0.106291s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:28:23.067056500 0.337146s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:28:45.238640300 0.016906s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:28:45.239637200 0.017024s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:28:45.239637201 0.017050s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:28:45.288635200 0.066519s info: Automatically using cache size of 2141 MB
+2017-07-27T11:28:45.290635800 0.068758s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:28:45.292636300 0.070736s notice: Listening for client driver connections on port 28015
+2017-07-27T11:28:45.293637500 0.071033s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:28:45.293637501 0.071039s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:28:45.293637502 0.071044s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:28:45.293637503 0.071050s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:28:45.293637504 0.071052s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:28:45.293637505 0.071055s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:28:45.515635300 0.293342s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:29:27.263465200 0.013011s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:29:27.264464600 0.013142s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:29:27.264464601 0.013167s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:29:27.377469200 0.126564s info: Automatically using cache size of 2129 MB
+2017-07-27T11:29:27.379468500 0.128670s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:29:27.381468700 0.130700s notice: Listening for client driver connections on port 28015
+2017-07-27T11:29:27.381468701 0.130971s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:29:27.381468702 0.130976s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:29:27.381468703 0.130978s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:29:27.381468704 0.130981s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:29:27.381468705 0.130982s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:29:27.381468706 0.130985s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:29:27.619922200 0.368620s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:31:25.471687400 0.014900s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:31:25.471687401 0.014994s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:31:25.471687402 0.015011s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:31:25.562687500 0.106469s info: Automatically using cache size of 2137 MB
+2017-07-27T11:31:25.565687500 0.109448s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:31:25.567687200 0.110843s notice: Listening for client driver connections on port 28015
+2017-07-27T11:31:25.567687201 0.111043s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:31:25.567687202 0.111047s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:31:25.567687203 0.111048s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:31:25.567687204 0.111050s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:31:25.567687205 0.111051s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:31:25.567687206 0.111052s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:31:25.802687100 0.346636s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:31:42.034585100 0.018472s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:31:42.034585101 0.018597s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:31:42.034585102 0.018623s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:31:42.112588800 0.097073s info: Automatically using cache size of 2137 MB
+2017-07-27T11:31:42.114585900 0.098852s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:31:42.115585400 0.100182s notice: Listening for client driver connections on port 28015
+2017-07-27T11:31:42.116586100 0.100395s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:31:42.116586101 0.100399s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:31:42.116586102 0.100399s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:31:42.116586103 0.100402s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:31:42.116586104 0.100402s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:31:42.116586105 0.100404s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:31:42.346588800 0.330468s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:31:49.735128800 7.719521s notice: Server got Control-C; shutting down...
+2017-07-27T11:31:49.735128801 7.719613s notice: Shutting down client connections...
+2017-07-27T11:31:49.735128802 7.719672s notice: All client connections closed.
+2017-07-27T11:31:49.735128803 7.719674s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-27T11:31:49.736133000 7.719997s notice: Storage engine shut down.
+2017-07-27T11:36:05.983749900 0.013746s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:36:05.983749901 0.013923s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:36:05.983749902 0.013945s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:36:06.065750400 0.096140s info: Automatically using cache size of 2164 MB
+2017-07-27T11:36:06.068751700 0.098710s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:36:06.071750000 0.101794s notice: Listening for client driver connections on port 28015
+2017-07-27T11:36:06.071750001 0.102037s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:36:06.071750002 0.102042s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:36:06.071750003 0.102043s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:36:06.071750004 0.102045s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:36:06.071750005 0.102046s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:36:06.071750006 0.102049s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:36:06.314749000 0.344803s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:36:11.258886700 5.289271s notice: Server got Control-C; shutting down...
+2017-07-27T11:36:11.258886701 5.289366s notice: Shutting down client connections...
+2017-07-27T11:36:11.258886702 5.289423s notice: All client connections closed.
+2017-07-27T11:36:11.258886703 5.289425s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-27T11:36:11.258886704 5.289748s notice: Storage engine shut down.
+2017-07-27T11:36:19.859997000 0.013092s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:36:19.859997001 0.013192s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:36:19.859997002 0.013217s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:36:19.951983700 0.104810s info: Automatically using cache size of 2137 MB
+2017-07-27T11:36:19.952981800 0.106670s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:36:19.954981100 0.108012s notice: Listening for client driver connections on port 28015
+2017-07-27T11:36:19.954981101 0.108226s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:36:19.954981102 0.108229s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:36:19.954981103 0.108231s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:36:19.954981104 0.108232s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:36:19.954981105 0.108233s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:36:19.954981106 0.108235s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:36:20.193999200 0.347655s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:37:20.331553300 0.014287s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:37:20.331553301 0.014410s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:37:20.331553302 0.014436s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:37:20.410555600 0.093316s info: Automatically using cache size of 2157 MB
+2017-07-27T11:37:20.414554500 0.097311s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:37:20.416554300 0.099267s notice: Listening for client driver connections on port 28015
+2017-07-27T11:37:20.416554301 0.099551s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:37:20.416554302 0.099557s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:37:20.416554303 0.099559s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:37:20.416554304 0.099562s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:37:20.416554305 0.099563s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:37:20.416554306 0.099566s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:37:20.645553200 0.328507s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:39:27.235868200 0.018140s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:39:27.235868201 0.018681s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:39:27.235868202 0.018730s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:39:27.332853800 0.115003s info: Automatically using cache size of 2154 MB
+2017-07-27T11:39:27.334856900 0.117004s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:39:27.336854100 0.119463s notice: Listening for client driver connections on port 28015
+2017-07-27T11:39:27.336854101 0.119680s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:39:27.336854102 0.119684s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:39:27.336854103 0.119685s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:39:27.336854104 0.119687s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:39:27.336854105 0.119688s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:39:27.336854106 0.119690s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:39:27.569857600 0.352547s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:49:48.822328800 0.013480s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:49:48.822328801 0.013590s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:49:48.822328802 0.013610s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:49:48.900326900 0.091177s info: Automatically using cache size of 2140 MB
+2017-07-27T11:49:48.902327900 0.093336s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:49:48.904327200 0.094871s notice: Listening for client driver connections on port 28015
+2017-07-27T11:49:48.904327201 0.095091s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:49:48.904327202 0.095101s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:49:48.904327203 0.095102s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:49:48.904327204 0.095104s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:49:48.904327205 0.095105s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:49:48.904327206 0.095108s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:49:49.127330000 0.318270s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T11:49:54.551586100 5.742886s notice: Server got Control-C; shutting down...
+2017-07-27T11:49:54.552600000 5.742987s notice: Shutting down client connections...
+2017-07-27T11:49:54.552600001 5.743086s notice: All client connections closed.
+2017-07-27T11:49:54.552600002 5.743093s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-27T11:49:54.552600003 5.743353s notice: Storage engine shut down.
+2017-07-27T11:50:01.051456100 0.016193s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T11:50:01.051456101 0.016317s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T11:50:01.051456102 0.016344s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T11:50:01.144456700 0.109358s info: Automatically using cache size of 2160 MB
+2017-07-27T11:50:01.146457700 0.111341s notice: Listening for intracluster connections on port 29015
+2017-07-27T11:50:01.147458000 0.112868s notice: Listening for client driver connections on port 28015
+2017-07-27T11:50:01.148461700 0.113143s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T11:50:01.148461701 0.113148s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T11:50:01.148461702 0.113150s notice: Listening on driver address: 127.0.0.1
+2017-07-27T11:50:01.148461703 0.113153s notice: Listening on http address: 127.0.0.1
+2017-07-27T11:50:01.148461704 0.113154s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T11:50:01.148461705 0.113157s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T11:50:01.374455600 0.339492s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T15:41:27.139153000 0.017973s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T15:41:27.139153001 0.018103s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T15:41:27.139153002 0.018125s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T15:41:27.188156100 0.066485s info: Automatically using cache size of 2137 MB
+2017-07-27T15:41:27.190154600 0.068454s notice: Listening for intracluster connections on port 29015
+2017-07-27T15:41:27.191158300 0.069989s notice: Listening for client driver connections on port 28015
+2017-07-27T15:41:27.191158301 0.070204s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T15:41:27.191158302 0.070208s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T15:41:27.191158303 0.070210s notice: Listening on driver address: 127.0.0.1
+2017-07-27T15:41:27.191158304 0.070212s notice: Listening on http address: 127.0.0.1
+2017-07-27T15:41:27.191158305 0.070213s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T15:41:27.191158306 0.070216s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T15:41:27.432155100 0.311043s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T15:41:45.475462300 18.354048s notice: Server got Control-C; shutting down...
+2017-07-27T15:41:45.475462301 18.354145s notice: Shutting down client connections...
+2017-07-27T15:41:45.475462302 18.354221s notice: All client connections closed.
+2017-07-27T15:41:45.475462303 18.354223s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-27T15:41:45.475462304 18.354529s notice: Storage engine shut down.
+2017-07-27T15:42:16.072523200 0.013895s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T15:42:16.072523201 0.014017s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T15:42:16.072523202 0.014042s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T15:42:16.152524400 0.093397s info: Automatically using cache size of 2156 MB
+2017-07-27T15:42:16.153523900 0.095253s notice: Listening for intracluster connections on port 29015
+2017-07-27T15:42:16.155527800 0.096824s notice: Listening for client driver connections on port 28015
+2017-07-27T15:42:16.155527801 0.097076s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T15:42:16.155527802 0.097081s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T15:42:16.155527803 0.097083s notice: Listening on driver address: 127.0.0.1
+2017-07-27T15:42:16.155527804 0.097085s notice: Listening on http address: 127.0.0.1
+2017-07-27T15:42:16.155527805 0.097087s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T15:42:16.155527806 0.097090s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T15:42:16.391526200 0.332937s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T15:42:29.538998500 13.480781s notice: Server got Control-C; shutting down...
+2017-07-27T15:42:29.540022700 13.480888s notice: Shutting down client connections...
+2017-07-27T15:42:29.540022701 13.480947s notice: All client connections closed.
+2017-07-27T15:42:29.540022702 13.480948s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-07-27T15:42:29.540022703 13.481240s notice: Storage engine shut down.
+2017-07-27T15:42:40.013213900 0.014509s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T15:42:40.014213800 0.014638s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T15:42:40.014213801 0.014662s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T15:42:40.124213700 0.124738s info: Automatically using cache size of 2151 MB
+2017-07-27T15:42:40.126215600 0.126703s notice: Listening for intracluster connections on port 29015
+2017-07-27T15:42:40.128215300 0.128666s notice: Listening for client driver connections on port 28015
+2017-07-27T15:42:40.128215301 0.128948s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T15:42:40.128215302 0.128954s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T15:42:40.128215303 0.128956s notice: Listening on driver address: 127.0.0.1
+2017-07-27T15:42:40.128215304 0.128958s notice: Listening on http address: 127.0.0.1
+2017-07-27T15:42:40.128215305 0.128959s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T15:42:40.128215306 0.128962s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T15:42:40.775234200 0.776206s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T15:43:13.498999100 0.015406s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T15:43:13.498999101 0.015532s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T15:43:13.498999102 0.015558s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T15:43:13.590001400 0.106648s info: Automatically using cache size of 2156 MB
+2017-07-27T15:43:13.592017800 0.108857s notice: Listening for intracluster connections on port 29015
+2017-07-27T15:43:13.595007100 0.112068s notice: Listening for client driver connections on port 28015
+2017-07-27T15:43:13.595007101 0.112304s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T15:43:13.595007102 0.112309s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T15:43:13.595007103 0.112310s notice: Listening on driver address: 127.0.0.1
+2017-07-27T15:43:13.595007104 0.112312s notice: Listening on http address: 127.0.0.1
+2017-07-27T15:43:13.595007105 0.112313s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T15:43:13.595007106 0.112314s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T15:43:13.819003800 0.336232s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-07-27T15:43:32.088641000 0.017609s notice: Running rethinkdb 2.3.5-windows (MSC 190023506)...
+2017-07-27T15:43:32.088641001 0.017902s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2017-07-27T15:43:32.088641002 0.017953s notice: Loading data from directory C:\\Users\\steven\\Projects\\Kilns Server Manager\\rethinkdb_data
+2017-07-27T15:43:32.157630600 0.087345s info: Automatically using cache size of 2130 MB
+2017-07-27T15:43:32.159632000 0.089243s notice: Listening for intracluster connections on port 29015
+2017-07-27T15:43:32.161631700 0.090646s notice: Listening for client driver connections on port 28015
+2017-07-27T15:43:32.161631701 0.090851s notice: Listening for administrative HTTP connections on port 8080
+2017-07-27T15:43:32.161631702 0.090855s notice: Listening on cluster address: 127.0.0.1
+2017-07-27T15:43:32.161631703 0.090856s notice: Listening on driver address: 127.0.0.1
+2017-07-27T15:43:32.161631704 0.090858s notice: Listening on http address: 127.0.0.1
+2017-07-27T15:43:32.161631705 0.090859s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-07-27T15:43:32.161631706 0.090861s notice: Server ready, "SwanDevLaptop_395" 6cee2a5c-5a65-4a98-9bb0-cde7acef946d
+2017-07-27T15:43:32.398631300 0.328281s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.

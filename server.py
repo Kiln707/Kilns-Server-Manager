@@ -1,13 +1,13 @@
 #! /usr/bin/python3
 
-import os, subprocess, sys, datetime, time, socket
+import os, subprocess, sys, datetime, time, socket, select
 import rethinkdb as r
 
 ############################################
 # Log class
 # Handles writing to console and log files
 ############################################
-
+logger=None
 class Log:
     def __init__(self, location, filename):
         global print
@@ -70,16 +70,28 @@ def getConfigs(location):
 ###################################
 def initializeNetworking(cfg):
     global logger
-    print("Initilizing networking...")
+    print("Initialzing Network...")
+
+    print("Initilizing Console socket...")
     consoleSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    networkSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        consoleSocket.bind( ('localhost', 8889) )
-        networkSocket.bind( (cfg['bind_ip'], int(cfg['bind_port'])) )
+        consoleSocket.bind( ('localhost', 23) )
     except socket.error as msg:
-        logger.log("Failed to bind to",cfg['bind_ip']+":"+cfg['bind_port'],"Error Code:", str(msg[0]), 'Message:',msg[1])
+        logger.log("Failed to bind Console. Error Code:", str(msg[0]), 'Message:',msg[1])
     consoleSocket.listen(5)
-    networkSocket.listen(5)
+    print("Console socket intitialized.")
+
+    if(cfg['bind_ip'] != ''):
+        print("Initilizing Console socket...")
+        networkSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            networkSocket.bind( (cfg['bind_ip'], int(cfg['bind_port'])) )
+        except socket.error as msg:
+            logger.log("Failed to bind to",cfg['bind_ip']+":"+cfg['bind_port'],"Error Code:", str(msg[0]), 'Message:',msg[1])
+        networkSocket.listen(5)
+        print("Console socket intitialized.")
+    else:
+        logger.log("Not accepting Network Connections!",'WARN')
     print("Network intitialization complete.")
     return networkSocket, consoleSocket
 
@@ -133,6 +145,7 @@ def main():
     filename='Service_Manager'
     cwd=os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
+    global logger
     #Initialize the logger.
     logger = Log( os.path.join(cwd, 'logs') , filename+".log") #Create the log object
 
@@ -144,11 +157,31 @@ def main():
 
     #Initialize the socket server
     consoleSocket, networkSocket = initializeNetworking(cfg)
+
     #######################################
     #   SERVER RUNNING !
     ######################################
-    while False:
-        pass #SERVER LOGIC
+    read_list = [consoleSocket, networkSocket]
+    while True:
+        readable, writable, errored = select.select(read_list, [],[])
+        for s in readable:
+            if s is networkSocket:
+                client_sock, address = networkSocket.accept()
+                read_list.append(client_sock)
+                print("Connection from"+str(address))
+            elif s is consoleSocket:
+                client_sock, address = consoleSocket.accept()
+                read_list.append(client_sock)
+                print("Console Connected!")
+            else:
+                data = s.recv(1024)
+                if data:
+                    print(data)
+                    if(data == b'S'):
+                        break
+                else:
+                    s.close()
+                    read_list.remove(s)
 
     #######################################
     #   SHUTDOWN SERVER !

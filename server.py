@@ -75,12 +75,11 @@ def initializeNetworking(cfg):
     print("Initilizing Console socket...")
     consoleSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        consoleSocket.bind( ('localhost', 23) )
+        consoleSocket.bind( ('localhost', 8889) )
     except socket.error as msg:
         logger.log("Failed to bind Console. Error Code:", str(msg[0]), 'Message:',msg[1])
     consoleSocket.listen(5)
     print("Console socket intitialized.")
-
     if(cfg['bind_ip'] != ''):
         print("Initilizing Console socket...")
         networkSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -95,7 +94,15 @@ def initializeNetworking(cfg):
     print("Network intitialization complete.")
     return networkSocket, consoleSocket
 
-def clientConnectionHandler():
+def receiveData(connection):
+    amount_received = 0
+    amount_expected = len(message)
+    while amount_received < amount_expected:
+        data = sock.recv(16)
+        amount_received += len(data)
+        print('received {!r}'.format(data))
+
+def processClientData(data):
     pass
 
 def shutdownNetworking(consoleSocket, networkSocket):

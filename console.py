@@ -1,6 +1,7 @@
 #! /usr/bin/python3
-
-import sys, socket
+from Serialization import Tag
+from Serialization.json_io import encodeJSON, decodeJSON
+import sys, socket, struct
 
 ####################################################################################################
 # Variable Section
@@ -38,15 +39,44 @@ def getConfigs(location):
                 line = cfgFile.readline()
     return cfg
 
+###########################################
+#   Networking Section
+###########################################
+def sendNetworkData(connection, data):
+    connection.sendall(struct.pack('>i', len(data))+data.encode('ascii'))
+
+def receiveNetworkData(connection):
+    #data length is packed into 4 bytes
+    total_len=0;total_data=bytearray();size=sys.maxsize
+    sock_data=bytearray();recv_size=8192
+    while total_len<size:
+        sock_data=connection.recv(recv_size)
+        if not sock_data:
+            return None
+        if not total_data:
+            if len(sock_data)>4:
+                size=struct.unpack('>i', sock_data[:4])[0]
+                for b in sock_data[4:]:
+                    total_data.append(b)
+            elif len(sock_data) == 4:
+                size=struct.unpack('>i', sock_data[:4])[0]
+        else:
+            total_data.append(sock_data)
+        total_len=len(total_data)
+    return bytes(total_data).decode('ascii')
+
 ###################################
 # Parse Command
 ##################################
 def parseCommand(command, args, connection):
+    tag= Tag()
+    tag.addData('COMMAND', command)
+    tag.addData('DATA', args)
     if command == "START":
-        connection.sendall(b'START')
+        sendNetworkData(connection, encodeJSON(tag) )
         print("Start Service.",inDevelop)
     elif command == "STOP":
-        connection.sendall(b'STOP')
+        sendNetworkData(connection, "STOP")
         print("Stop Service.",inDevelop)
     elif command == "RESTART":
         print("Restart Service.",inDevelop)
@@ -73,15 +103,18 @@ def parseCommand(command, args, connection):
 # --------     Start script Section    --------------
 ######################################################################################
 #Connect to Server's Console
-serverConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serverConnection.connect( ('localhost', 8889) )
+
 
 #########################
 # Command Section
 #########################
 arg = str(sys.argv[1]).upper() #Get the command
 if arg in commands:
+    serverConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    serverConnection.connect( ('localhost', 8889) )
     parseCommand(arg, sys.argv[2:], serverConnection)
+    serverConnection.shutdown(socket.SHUT_RDWR)
+    serverConnection.close()
 elif arg in options:
     parseOption(arg)
 else:

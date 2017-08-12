@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 
-import os, subprocess, sys, datetime, time, socket, select
+import os, subprocess, sys, datetime, time, socket, select, struct
 import rethinkdb as r
 
 ############################################
@@ -94,13 +94,28 @@ def initializeNetworking(cfg):
     print("Network intitialization complete.")
     return networkSocket, consoleSocket
 
-def receiveData(connection):
-    amount_received = 0
-    amount_expected = len(message)
-    while amount_received < amount_expected:
-        data = sock.recv(16)
-        amount_received += len(data)
-        print('received {!r}'.format(data))
+def sendNetworkData(connection, data):
+    connection.sendall(struct.pack('>i', len(data))+data.encode('ascii'))
+
+def receiveNetworkData(connection):
+    #data length is packed into 4 bytes
+    total_len=0;total_data=bytearray();size=sys.maxsize
+    sock_data=bytearray();recv_size=8192
+    while total_len<size:
+        sock_data=connection.recv(recv_size)
+        if not sock_data:
+            return None
+        if not total_data:
+            if len(sock_data)>4:
+                size=struct.unpack('>i', sock_data[:4])[0]
+                for b in sock_data[4:]:
+                    total_data.append(b)
+            elif len(sock_data) == 4:
+                size=struct.unpack('>i', sock_data[:4])[0]
+        else:
+            total_data.append(sock_data)
+        total_len=len(total_data)
+    return bytes(total_data).decode('ascii')
 
 def processClientData(data):
     pass
@@ -165,29 +180,40 @@ def main():
     #Initialize the socket server
     consoleSocket, networkSocket = initializeNetworking(cfg)
 
+    connectionList={}
+
     #######################################
     #   SERVER RUNNING !
     ######################################
     read_list = [consoleSocket, networkSocket]
-    while True:
-        readable, writable, errored = select.select(read_list, [],[])
+    RUNNING=True
+    while RUNNING:
+        print("Iteration")
+        readable, writable, errored = select.select(read_list, [],[], 0.5)
         for s in readable:
             if s is networkSocket:
+                print("NetSocket")
                 client_sock, address = networkSocket.accept()
                 read_list.append(client_sock)
+                connectionList[client_sock]=address
                 print("Connection from"+str(address))
             elif s is consoleSocket:
+                print("ConSocket")
                 client_sock, address = consoleSocket.accept()
                 read_list.append(client_sock)
                 print("Console Connected!")
             else:
-                data = s.recv(1024)
+                print("OtherSock")
+                data = receiveNetworkData(s)
                 if data:
                     print(data)
-                    if(data == b'S'):
-                        break
+                    if(str(data) == "STOP"):
+                        RUNNING=False
                 else:
+                    address = connectionList[s]
+                    print("Closing "+str(address) )
                     s.close()
+                    connectionList.pop(s,None)
                     read_list.remove(s)
 
     #######################################

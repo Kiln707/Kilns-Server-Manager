@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 
 import os, subprocess, sys, datetime, time, socket, select, struct
+from threading import Thread
 import rethinkdb as r
 
 ############################################
@@ -117,14 +118,24 @@ def receiveNetworkData(connection):
         total_len=len(total_data)
     return bytes(total_data).decode('ascii')
 
-def processClientData(data):
-    pass
-
 def shutdownNetworking(consoleSocket, networkSocket):
     print("Shutting down networking...")
     consoleSocket.close()
     networkSocket.close()
     print('Network shutdown complete.')
+
+######################################################
+#   Client Handler
+######################################################
+def processClient(connection, address):
+    print('in thread')
+    data = receiveNetworkData(connection)
+    while data:
+        print('hello')
+        print(data)
+        data = receiveNetworkData(connection)
+    connection.close()
+    print("Ended connection with",address)
 
 ###################################
 # Database Section
@@ -157,9 +168,8 @@ def shutdownDatabase(databaseObj, connection):
 ######################################
 #   Program Section
 #####################################
-
+RUNNING=True
 def main():
-
     ##############################
     # INITIALIZE SERVER !
     ###############################
@@ -186,35 +196,19 @@ def main():
     #   SERVER RUNNING !
     ######################################
     read_list = [consoleSocket, networkSocket]
-    RUNNING=True
+    global RUNNING
     while RUNNING:
         print("Iteration")
         readable, writable, errored = select.select(read_list, [],[], 0.5)
         for s in readable:
-            if s is networkSocket:
-                print("NetSocket")
-                client_sock, address = networkSocket.accept()
-                read_list.append(client_sock)
-                connectionList[client_sock]=address
-                print("Connection from"+str(address))
-            elif s is consoleSocket:
-                print("ConSocket")
-                client_sock, address = consoleSocket.accept()
-                read_list.append(client_sock)
-                print("Console Connected!")
-            else:
-                print("OtherSock")
-                data = receiveNetworkData(s)
-                if data:
-                    print(data)
-                    if(str(data) == "STOP"):
-                        RUNNING=False
-                else:
-                    address = connectionList[s]
-                    print("Closing "+str(address) )
-                    s.close()
-                    connectionList.pop(s,None)
-                    read_list.remove(s)
+            if s is networkSocket or consoleSocket:
+                connection, address = networkSocket.accept()
+                print('Accepting connection from '+str(address))
+                try:
+                    Thread(target=processClient, args=(connection, address))
+                except:
+                    print("Failed to accept Connection "+address)
+                    traceback.print_exc()
 
     #######################################
     #   SHUTDOWN SERVER !

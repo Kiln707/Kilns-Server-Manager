@@ -1,7 +1,8 @@
 #! /usr/bin/python3
 from Serialization import Tag
-from Serialization.json_io import encodeJSON, decodeJSON
+from Networking.common import *
 import sys, socket, struct
+from Serialization.json_io import encodeJSON, decodeJSON
 
 ####################################################################################################
 # Variable Section
@@ -39,32 +40,6 @@ def getConfigs(location):
                 line = cfgFile.readline()
     return cfg
 
-###########################################
-#   Networking Section
-###########################################
-def sendNetworkData(connection, data):
-    connection.sendall(struct.pack('>i', len(data))+data.encode('ascii'))
-
-def receiveNetworkData(connection):
-    #data length is packed into 4 bytes
-    total_len=0;total_data=bytearray();size=sys.maxsize
-    sock_data=bytearray();recv_size=8192
-    while total_len<size:
-        sock_data=connection.recv(recv_size)
-        if not sock_data:
-            return None
-        if not total_data:
-            if len(sock_data)>4:
-                size=struct.unpack('>i', sock_data[:4])[0]
-                for b in sock_data[4:]:
-                    total_data.append(b)
-            elif len(sock_data) == 4:
-                size=struct.unpack('>i', sock_data[:4])[0]
-        else:
-            total_data.append(sock_data)
-        total_len=len(total_data)
-    return bytes(total_data).decode('ascii')
-
 ###################################
 # Parse Command
 ##################################
@@ -73,7 +48,8 @@ def parseCommand(command, args, connection):
     tag.addData('COMMAND', command)
     tag.addData('DATA', args)
     if command == "START":
-        sendNetworkData(connection, encodeJSON(tag) )
+        sendNetworkData(connection, tag)
+        print(encodeJSON(receiveNetworkData(connection)))
         print("Start Service.",inDevelop)
     elif command == "STOP":
         sendNetworkData(connection, "STOP")

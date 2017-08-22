@@ -1,8 +1,11 @@
 #! /usr/bin/python3
 
-import os, subprocess, sys, datetime, time, socket, select, struct
-from threading import Thread
+import os, subprocess, sys, datetime, time, socket, select
 import rethinkdb as r
+from Serialization import Tag
+from threading import Thread
+from Networking.common import *
+from Serialization.json_io import encodeJSON, decodeJSON
 
 ############################################
 # Log class
@@ -95,29 +98,6 @@ def initializeNetworking(cfg):
     print("Network intitialization complete.")
     return networkSocket, consoleSocket
 
-def sendNetworkData(connection, data):
-    connection.sendall(struct.pack('>i', len(data))+data.encode('ascii'))
-
-def receiveNetworkData(connection):
-    #data length is packed into 4 bytes
-    total_len=0;total_data=bytearray();size=sys.maxsize
-    sock_data=bytearray();recv_size=8192
-    while total_len<size:
-        sock_data=connection.recv(recv_size)
-        if not sock_data:
-            return None
-        if not total_data:
-            if len(sock_data)>4:
-                size=struct.unpack('>i', sock_data[:4])[0]
-                for b in sock_data[4:]:
-                    total_data.append(b)
-            elif len(sock_data) == 4:
-                size=struct.unpack('>i', sock_data[:4])[0]
-        else:
-            total_data.append(sock_data)
-        total_len=len(total_data)
-    return bytes(total_data).decode('ascii')
-
 def shutdownNetworking(consoleSocket, networkSocket):
     print("Shutting down networking...")
     consoleSocket.close()
@@ -127,15 +107,17 @@ def shutdownNetworking(consoleSocket, networkSocket):
 ######################################################
 #   Client Handler
 ######################################################
-def processClient(connection, address):
-    print('in thread')
+def processClient(connection, address, log):
     data = receiveNetworkData(connection)
     while data:
-        print('hello')
-        print(data)
+        log.log("Receiving data from "+address[0])
+        receivedData = Tag()
+        receivedData.addData('RECEIVED', data)
+        sendNetworkData(connection, receivedData)
+        log.log(encodeJSON(receivedData))
         data = receiveNetworkData(connection)
     connection.close()
-    print("Ended connection with",address)
+    log.log("Ended connection with "+address[0])
 
 ###################################
 # Database Section
@@ -205,7 +187,7 @@ def main():
                 connection, address = networkSocket.accept()
                 print('Accepting connection from '+str(address))
                 try:
-                    Thread(target=processClient, args=(connection, address))
+                    Thread(target=processClient, args=(connection, address, logger)).start()
                 except:
                     print("Failed to accept Connection "+address)
                     traceback.print_exc()

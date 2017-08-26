@@ -28,3 +28,18 @@ def receiveNetworkData(connection):
             total_data.append(sock_data)
         total_len=len(total_data)
     return decodeJSON(bytes(total_data).decode('ascii'))
+
+def initializeNetworkServer(address, port, connections=5):
+    print("Creating Network server listening on "+address+":"port)
+    if address and port:
+        networkSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            networkSocket.bind( address, port )
+            networkSocket.listen(connections)
+            print("Network server creation complete.")
+            return networkSocket
+        except socket.error as msg:
+            print("Failed to bind to"+address+":"+port,"Error Code:", str(msg[0]), 'Message:',msg[1])
+    else:
+        print('Failed to initialize network server. Bad address, port')
+    return None

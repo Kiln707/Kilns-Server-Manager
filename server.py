@@ -37,9 +37,6 @@ class Log:
         else:
             self.console.write(output)
 
-
-
-
 def __charPos(char, string, pos=0):
         for i in range(pos+1, len(string)):
                 if string[i] is char:
@@ -73,28 +70,13 @@ def getConfigs(location):
 # Networking/Console Section
 ###################################
 def initializeNetworking(cfg):
-    global logger
-    print("Initialzing Network...")
-
-    print("Initilizing Console socket...")
-    consoleSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    try:
-        consoleSocket.bind( ('localhost', 8889) )
-    except socket.error as msg:
-        logger.log("Failed to bind Console. Error Code:", str(msg[0]), 'Message:',msg[1])
-    consoleSocket.listen(5)
-    print("Console socket intitialized.")
-    if(cfg['bind_ip'] != ''):
-        print("Initilizing Console socket...")
-        networkSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        try:
-            networkSocket.bind( (cfg['bind_ip'], int(cfg['bind_port'])) )
-        except socket.error as msg:
-            logger.log("Failed to bind to",cfg['bind_ip']+":"+cfg['bind_port'],"Error Code:", str(msg[0]), 'Message:',msg[1])
-        networkSocket.listen(5)
-        print("Console socket intitialized.")
-    else:
-        logger.log("Not accepting Network Connections!",'WARN')
+    print('Initializing console socket...')
+    consoleSocket = initializeNetworkServer('localhost', 8889)
+    return if consoleSocket is None:
+    print("Console socket intitialized!")
+    print("Initializing network socket...")
+    networkSocket = initializeNetworkServer(cfg['bind_ip'], int(cfg['bind_port']) )
+    return if networkSocket is None
     print("Network intitialization complete.")
     return networkSocket, consoleSocket
 
@@ -107,7 +89,29 @@ def shutdownNetworking(consoleSocket, networkSocket):
 ######################################################
 #   Client Handler
 ######################################################
+#Command needs to be sent as console.py START <OPTIONS> SERVICENAME
+def start(args):
+    if len(args) == 0:
+        t=Tag()
+        t.addData("ERROR", 0)
+        t.addData("MESSAGE", "Invalid arguments sent")
+        return t
+    elif not isinstance(args, Tag):
+        t=Tag()
+        t.addData("ERROR", 1)
+        t.addData("MESSAGE", "Received invalid data format")
+        return t
+    else:
+        pass
+
+
+
 def processClient(connection, address, log):
+    #Dictionary of valid commands and their associated function by reference
+    commands={"START":start, "STOP":stop ,"RESTART":restart,"Status":status,
+    "CREATE":create,"DELETE":delete,"EDIT":edit,"LIST":LIST,"EXPORT":export,
+    "IMPORT":IMPORT,"BACKUP":BACKUP,"INSTALL":INSTALL]
+
     data = receiveNetworkData(connection)
     while data:
         log.log("Receiving data from "+address[0])

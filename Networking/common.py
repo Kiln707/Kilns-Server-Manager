@@ -1,6 +1,6 @@
 from Serialization import Tag
 from Serialization.json_io import encodeJSON, decodeJSON
-import sys, struct
+import sys, struct, select
 
 def sendNetworkData(connection, tag):
     if isinstance(tag, Tag):
@@ -43,3 +43,6 @@ def initializeNetworkServer(address, port, connections=5):
     else:
         print('Failed to initialize network server. Bad address, port')
     return None
+
+def initializeNetworkConnection(address, port):
+    return socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect( (address, port) )
